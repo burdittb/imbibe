@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- 12
+dist: trusty
+sudo: falsenotifications:
+  email:
+    on_success: change # default: change (only when going from broken to fixed)
+    on_failure: always # default: always (which is annoying, as it should be)
+before_deploy: # omit node_modules, since we set skip_cleanup below
+  - rm -rf node_modules
+deploy: # see README for details on these keys
+  # prevents travis from deleting the build
+  skip_cleanup: true
+  provider: heroku
+  # app should be your heroku app name; see README
+  app: imbibe-app
+  # the secure key indicates an encrypted value; see README
+  api_key:
+    secure: 'need to set key'
