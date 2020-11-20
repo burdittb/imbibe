@@ -46,11 +46,12 @@ class ByName extends React.Component {
             <Button type="submit">Submit</Button>
           </form>
         </div>
-        {this.state.drinks.length > 0 && (
-          <div className="byNameList">
-            <SingleDrink />
-          </div>
-        )}
+        <div className="byNameList">
+          {this.state.drinks.length > 0 &&
+            this.state.drinks.map((drink) => {
+              return <SingleDrink key={drink.id} drink={drink} />;
+            })}
+        </div>
       </div>
     );
   }
