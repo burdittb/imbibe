@@ -6,7 +6,6 @@ import ByIngredient from './ByIngredient';
 import NonAlcoholicDrink from './NonAlcoholicDrink';
 import RandomDrink from './RandomDrink';
 import EveryDrink from './EveryDrink';
-import '../stylesheets/App.css';
 
 class App extends Component {
   render() {

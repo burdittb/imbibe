@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from './NavBar';
 import SingleDrink from './SingleDrink';
 import { fetchRandomDrink } from '../drinkService';
-import '../stylesheets/index.css';
 
 class RandomDrink extends React.Component {
   constructor() {

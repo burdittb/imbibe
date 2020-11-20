@@ -6,19 +6,19 @@ const Home = () => {
   return (
     <div className="homeButtons">
       <Link href="/byName">
-        <Button>Search By Name</Button>
+        <Button variant="contained">Search By Name</Button>
       </Link>
       <Link href="byIngredient">
-        <Button>Search By Ingredient</Button>
+        <Button variant="contained">Search By Ingredient</Button>
       </Link>
       <Link href="nonAlcoholic">
-        <Button>Non-Alcoholic</Button>
+        <Button variant="contained">Non-Alcoholic</Button>
       </Link>
       <Link href="shakeItUp">
-        <Button>Shake It Up</Button>
+        <Button variant="contained">Shake It Up</Button>
       </Link>
       <Link href="everything">
-        <Button>Show Me Everything</Button>
+        <Button variant="contained">Show Me Everything</Button>
       </Link>
     </div>
   );

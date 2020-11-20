@@ -5,11 +5,18 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fcede6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.app {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
 
 @keyframes shaker {
@@ -41,10 +48,6 @@ code {
   height: 75px;
 }
 
-.screenBelowNav {
-  overflow: scroll;
-}
-
 .navbar {
   background-color: #fcede6;
   position: fixed;
@@ -55,4 +58,5 @@ code {
 
 .screenBelowNav {
   padding-top: 30px;
+  overflow: scroll;
 }

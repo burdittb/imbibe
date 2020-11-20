@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
 import App from './components/App';
-// import { ThemeProvider } from '@material-ui/core/styles';
-import 'fontsource-roboto';
-import './stylesheets/index.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './material-ui/theme';
+import './stylesheets/app.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <ThemeProvider theme={theme}> */}
-    <App />
-    {/* </ThemeProvider> */}
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

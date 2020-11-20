@@ -2,7 +2,6 @@ import React from 'react';
 import NavBar from './NavBar';
 import SingleDrink from './SingleDrink';
 import { fetchNonAlcoholicDrinks } from '../drinkService';
-import '../stylesheets/index.css';
 
 class NonAlcoholicDrink extends React.Component {
   constructor() {
