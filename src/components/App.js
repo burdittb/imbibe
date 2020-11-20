@@ -5,6 +5,7 @@ import ByName from './ByName';
 import ByIngredient from './ByIngredient';
 import Drinks from './Drinks';
 import SingleDrink from './SingleDrink';
+import ShakeItUp from './ShakeItUp';
 import '../stylesheets/App.css';
 
 class App extends Component {
@@ -16,8 +17,9 @@ class App extends Component {
             <Switch>
               <Route exact path="/byName" component={ByName} />
               <Route exact path="/byIngredient" component={ByIngredient} />
+              <Route exact path="/shakeItUp" component={ShakeItUp} />
               {/* <Route exact path="/nonAlcoholic" component={ByName} />
-              <Route exact path="/shakeItUp" component={ByName} />
+
               <Route exact path="/everything" component={ByName} /> */}
               <Route exact path="/" component={Home} />
               <Route exact path="/drinks" component={Drinks} />
