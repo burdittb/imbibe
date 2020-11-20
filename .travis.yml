@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - 12
+cache:
+  directories:
+    - node_modules
 dist: trusty
 sudo: false
 notifications:
@@ -8,10 +11,10 @@ notifications:
     on_success: change
     on_failure: always
 install:
-  - npm ci # faster, goes only from package-lock
+  - npm ci
 script:
-  - npm test # test the code
-  - npm run build # make the bundle
+  - npm test
+  - npm run build
 before_deploy:
   - rm -rf node_modules
 deploy:
@@ -19,4 +22,4 @@ deploy:
   provider: heroku
   app: imbibe-app
   api_key:
-    secure: Pue3B8iugZW4piLRyWDhqGRG2Sh1EghE6jdlTFLmzmy+BEZtqlu+FzkNrC/4NHBV/QWlxsycyJZTb6LyHm5UMiUy/yGAhvgVZJgE280R5sFfyBCenfui8AkvJfj2lOUVe56DIY0sryEo3LGLy/5eRctz/vcs2n+lX94LAWicGbn4zG18YtvvonWt1cXruDqBI7Cl7TATQ4OrH/dXBtx5fcuXyW6P19GStvT+JJfXnOS5oPPdfQNQbuq7XN1tb5y7oe7rhiuT+RP9n3DMMqBs9dexbItaX4iM8pP1si6VhK84vDrk52VShq0zWy5nLa+BeYP+pFU7FroTpM46c9g5K06wD5SRYDpBg+rWZDuxMYfNAZwNguEy9SjkAScjj3wSuOY/Fgj3u5UI7bj7ioF4vOcRVzCHaeNXXZJ2bLomH/mNObd0mgFX1APt794p2lcLBuSf+YnYGi58diNKMUZMeH90zlmUDL/a2t5Isw1VijXQDu72IRMaQcWU1ETW7SQ8s26HrGD00RprFoAua93NuI7UgT3cdyI1Y+ZeYjtRBEufZmpHdXSGx6r5QiKNAbLPlcvu3IjyZlMhjHBVL/5cNhrN+sypp3lqAvT3zq/hAq7aAzgic11zHxlPlWHBKa/H0nxY1SVd3d/Gj3bYmSlupk4F5cAhLuOpFtAI0oqRfAo=
+    secure: x8GqYwOTPZCZV/pQBuWKWvfARIGJ9NW42xvktlp47QaO20q/b6q21z2BzGvUsydcYMplWVLEoNRWjbaZnJfWPhhGkvPwtoaJJPhr2vw/fNeVwgUygcgyp2IbsCiDCB4wq4R9kpEdHL4d/q1SS2IP5qX8TBmA3wuoCiwLmGMq2Ea4c9ilvZUzEp9aNuA+2Tc+ZMLH1ZlQSn5BifwCBm5q1zrvKdqbmTTKtkORNVgk2bcvH3DRswCcC54+2fRc4tBWOr+WLqHvHygn3PpHQZ2rmq2IZYELAl2rYZGzkzYFNlbxhG8LVgDmWuww5hZEdlGM6Rnh1TGh38cGjPV2RPBfdlyPMXMoBmU8AozgU46vlaeo4FyrG52t7f5QQdwFphL+G+Uwm+8/RxFr+eVZFbt7ZU9xCeH6tgAZbzS9kyfQpq4v/rkN1vOUgsk3lZtdWP3MbllQMciK1I4TzVJFtYrKuGqx/Dl7nLFRLkgUZsSYRyKGe4b31c2Zltde+sUaqRSpId4TWzCfm4coLY/4MbkQ8N89MhUq02Z7PEbPYnx0DoYbLaBn+baqxrKxSiUFP3jJQeHX/dq/SzGBnYR7pEM4Q2MlynvOIAcDipqU3aY2YcFFlYbw2dcnjrs+VRbiq8RCIDWi8sYwBKFJ1Aee/sCZsplaT2NJWp17oUkLx2Mcm7o=
