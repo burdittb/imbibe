@@ -17,7 +17,7 @@ class App extends Component {
               {/* <Route exact path="/nonAlcoholic" component={ByName} />
               <Route exact path="/shakeItUp" component={ByName} />
               <Route exact path="/everything" component={ByName} /> */}
-              <Route exact path="/" component={Home} /> */}
+              <Route exact path="/" component={Home} />
               {/* <Route path="/drink/:drinkId" component={SingleDrink} /> */}
               <Redirect to="/" />
             </Switch>
