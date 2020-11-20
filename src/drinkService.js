@@ -12,6 +12,7 @@ export const fetchDrinksByName = async (name) => {
     const url = new URL(`${COCKTAILDB}${APIKEY}/search.php?s=${name}`);
     const { data } = await axios.get(url.href);
     console.log('fetchedDrink', data.drinks[0].strDrink);
+    return data.drinks[0].strDrink;
   } catch (err) {
     console.log(err);
   }

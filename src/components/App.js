@@ -1,24 +1,27 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Link } from 'react-router-dom';
-// import { fetchDrinksByName } from '../drinkService';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Home from './Home';
+import ByName from './ByName';
+import ByIngredient from './ByIngredient';
 import '../stylesheets/App.css';
-import ButtonGroup from '@material-ui/core/ButtonGroup';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className="app">
-          <ButtonGroup variant="contained">
-            <Button>Search By Name</Button>
-            <Button>Search By Ingredient</Button>
-            <Button>Non-Alcoholic</Button>
-            <Button>Shake It Up</Button>
-            <Button>Show Me Everything</Button>
-          </ButtonGroup>
-          <TextField variant="outlined" placeholder="search..." />
+          <main>
+            <Switch>
+              <Route exact path="/byName" component={ByName} />
+              <Route exact path="/byIngredient" component={ByIngredient} />
+              {/* <Route exact path="/nonAlcoholic" component={ByName} />
+              <Route exact path="/shakeItUp" component={ByName} />
+              <Route exact path="/everything" component={ByName} /> */}
+              <Route exact path="/" component={Home} /> */}
+              {/* <Route path="/drink/:drinkId" component={SingleDrink} /> */}
+              <Redirect to="/" />
+            </Switch>
+          </main>
         </div>
       </BrowserRouter>
     );
