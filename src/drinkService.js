@@ -2,10 +2,6 @@ import axios from 'axios';
 
 const COCKTAILDB = process.env.REACT_APP_COCKTAILDB;
 const APIKEY = process.env.REACT_APP_APIKEY;
-// cocktail by name: search.php?s=margarita
-// cocktail by first letter: search.php?f=a
-// ingredient by name: search.php?i=vodka
-// random cocktail: random.php
 
 const drinksReducer = (results) => {
   let drinks = [];
@@ -45,6 +41,56 @@ const drinksReducer = (results) => {
 export const fetchDrinksByName = async (name) => {
   try {
     const url = new URL(`${COCKTAILDB}${APIKEY}/search.php?s=${name}`);
+    const { data } = await axios.get(url.href);
+    return drinksReducer(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchDrinksByIngredient = async (ingredient) => {
+  try {
+    const url = new URL(`${COCKTAILDB}${APIKEY}/filter.php?i=${ingredient}`);
+    const { data } = await axios.get(url.href);
+    return drinksReducer(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchDrinkById = async (id) => {
+  try {
+    const url = new URL(`${COCKTAILDB}${APIKEY}/lookup.php?i=${id}`);
+    const { data } = await axios.get(url.href);
+    return drinksReducer(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchNonAlcoholicDrinks = async () => {
+  try {
+    const url = new URL(`${COCKTAILDB}${APIKEY}/filter.php?a=Non_Alcoholic`);
+    const { data } = await axios.get(url.href);
+    return drinksReducer(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchRandomDrink = async () => {
+  try {
+    const url = new URL(`${COCKTAILDB}${APIKEY}/random.php`);
+    const { data } = await axios.get(url.href);
+    return drinksReducer(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const fetchEveryDrink = async () => {
+  try {
+    const url = new URL(`${COCKTAILDB}${APIKEY}/filter.php?c=Cocktail`);
     const { data } = await axios.get(url.href);
     return drinksReducer(data);
   } catch (err) {

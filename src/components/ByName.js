@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from './NavBar';
-import SingleDrink from './SingleDrink';
+import SingleDrinkByName from './SingleDrinkByName';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
@@ -31,9 +31,9 @@ class ByName extends React.Component {
 
   render() {
     return (
-      <div className="byName">
+      <div className="fullScreen">
         <NavBar />
-        <div className="searchByName">
+        <div className="screenBelowNav">
           <form onSubmit={this.handleSubmit}>
             <TextField
               variant="outlined"
@@ -49,7 +49,7 @@ class ByName extends React.Component {
         <div className="byNameList">
           {this.state.drinks.length > 0 &&
             this.state.drinks.map((drink) => {
-              return <SingleDrink key={drink.id} drink={drink} />;
+              return <SingleDrinkByName key={drink.id} drink={drink} />;
             })}
         </div>
       </div>

@@ -40,3 +40,19 @@ code {
 .shaker {
   height: 75px;
 }
+
+.screenBelowNav {
+  overflow: scroll;
+}
+
+.navbar {
+  background-color: #fcede6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+}
+
+.screenBelowNav {
+  padding-top: 30px;
+}

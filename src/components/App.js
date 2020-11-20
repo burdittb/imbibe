@@ -3,9 +3,9 @@ import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import Home from './Home';
 import ByName from './ByName';
 import ByIngredient from './ByIngredient';
-import Drinks from './Drinks';
-import SingleDrink from './SingleDrink';
-import ShakeItUp from './ShakeItUp';
+import NonAlcoholicDrink from './NonAlcoholicDrink';
+import RandomDrink from './RandomDrink';
+import EveryDrink from './EveryDrink';
 import '../stylesheets/App.css';
 
 class App extends Component {
@@ -15,15 +15,12 @@ class App extends Component {
         <div className="app">
           <main>
             <Switch>
-              <Route exact path="/byName" component={ByName} />
-              <Route exact path="/byIngredient" component={ByIngredient} />
-              <Route exact path="/shakeItUp" component={ShakeItUp} />
-              {/* <Route exact path="/nonAlcoholic" component={ByName} />
-
-              <Route exact path="/everything" component={ByName} /> */}
+              <Route path="/byName" component={ByName} />
+              <Route path="/byIngredient" component={ByIngredient} />
+              <Route path="/shakeItUp" component={RandomDrink} />
+              <Route path="/everything" component={EveryDrink} />
+              <Route exact path="/nonAlcoholic" component={NonAlcoholicDrink} />
               <Route exact path="/" component={Home} />
-              <Route exact path="/drinks" component={Drinks} />
-              <Route path="/drinks/:drinkId" component={SingleDrink} />
               <Redirect to="/" />
             </Switch>
           </main>
