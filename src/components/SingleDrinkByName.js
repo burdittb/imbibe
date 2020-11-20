@@ -15,7 +15,9 @@ const SingleDrinkByName = (props) => {
         <div className="singleDrinkIngredints">
           <h3>Ingredients:</h3>
           <div className="singleDrinkIngredientRow">
-            <p>{ingredients}</p>
+            {ingredients.map((ingredient, index) => {
+              return <p key={index}>{ingredient}</p>;
+            })}
           </div>
         </div>
         <div className="singleDrinkDirections">
