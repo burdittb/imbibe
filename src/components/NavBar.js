@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <Link href="/">
-        <HomeRoundedIcon style={{ color: '#A6A1A1' }} fontSize="large" />
+        <HomeRoundedIcon style={{ color: '#A6A1A1' }} fontSize="inherit" />
       </Link>
     </div>
   );

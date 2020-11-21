@@ -30,15 +30,17 @@ code {
 }
 
 .navbar {
+  z-index: 5;
   position: fixed;
   top: 0;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #fcede6;
   padding-left: 4px;
-  padding-right: 90%;
+  padding-right: 70%;
+  font-size: 44px;
 }
 
 .screenBelowNav {
@@ -74,15 +76,33 @@ code {
     transform: translate(-5px, -25px) rotate(-25deg);
   }
 }
+/*
+.fullScreen {
+  display: flex;
+  background-color: green;
+  align-content: flex-end;
+} */
 
 .shaker {
   animation: shaker 0.75s ease-in-out forwards;
-}
-
-.shaker {
   height: 75px;
   opacity: 0.5;
-  margin: 100px;
+  margin-top: 200px;
+  align-self: center;
+}
+
+.shaker-icon {
+  widows: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+}
+
+.shaker-button {
+  height: 50px;
+  opacity: 0.4;
+  padding-right: 6px;
 }
 
 form {
@@ -114,6 +134,9 @@ form #nameButton {
 
 .nonSearchBelowNav {
   padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .singleDrinkCard {
