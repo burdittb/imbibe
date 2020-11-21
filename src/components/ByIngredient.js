@@ -37,13 +37,14 @@ class ByIngredient extends React.Component {
         <div className="screenBelowNav">
           <form onSubmit={this.handleSubmit}>
             <TextField
+              id="nameInput"
               variant="outlined"
               placeholder="search..."
               name="ingredient"
               value={this.state.ingredient}
               onChange={this.handleChange}
             />
-            <Button type="submit" variant="contained">
+            <Button id="nameButton" type="submit" variant="contained">
               Submit
             </Button>
           </form>
