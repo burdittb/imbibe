@@ -28,7 +28,7 @@ const drinksReducer = (results) => {
       let measurement =
         drinkObj['strMeasure' + (index + 1)] !== null
           ? drinkObj['strMeasure' + (index + 1)]
-          : 'A dash of ';
+          : '';
       let ingredient = drinkObj['strIngredient' + (index + 1)];
       streamlinedDrink.ingredients.push(`${measurement} ${ingredient}`);
       index++;
