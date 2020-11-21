@@ -18,6 +18,7 @@ class EveryDrink extends React.Component {
     return (
       <div className="fullScreen">
         <NavBar />
+        <div className="shaker-icon"></div>
         <div className="nonSearchBelowNav">
           {this.state.drinks.length > 0 ? (
             this.state.drinks.map((drink) => {
