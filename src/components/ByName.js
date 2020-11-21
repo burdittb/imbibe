@@ -38,12 +38,13 @@ class ByName extends React.Component {
             <TextField
               variant="outlined"
               placeholder="search..."
-              color="secondary"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
             />
-            <Button type="submit">Submit</Button>
+            <Button type="submit" variant="contained">
+              Submit
+            </Button>
           </form>
         </div>
         <div className="byNameList">

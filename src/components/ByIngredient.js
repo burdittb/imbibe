@@ -44,7 +44,9 @@ class ByIngredient extends React.Component {
               value={this.state.ingredient}
               onChange={this.handleChange}
             />
-            <Button type="submit">Submit</Button>
+            <Button type="submit" variant="contained">
+              Submit
+            </Button>
           </form>
         </div>
         <div className="byNameList">

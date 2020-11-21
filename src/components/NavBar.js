@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <Link href="/">
-        <HomeRoundedIcon />
+        <HomeRoundedIcon style={{ color: '#666363' }} />
       </Link>
     </div>
   );
