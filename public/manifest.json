@@ -3,7 +3,7 @@
   "name": "Imbibe",
   "icons": [
     {
-      "src": "/images/favicon.ico",
+      "src": "favicon.ico",
       "sizes": "32x32 16x16",
       "type": "image/x-icon"
     },
@@ -19,7 +19,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "https://imbibe-app.firebaseapp.com/",
+  "start_url": "https://imbibe-app.web.app",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

@@ -12,6 +12,7 @@ class ByIngredient extends React.Component {
     this.state = {
       ingredient: '',
       drinks: [],
+      drinksFound: true,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,7 +27,11 @@ class ByIngredient extends React.Component {
   async handleSubmit(e) {
     e.preventDefault();
     const drinks = await fetchDrinksByIngredient(this.state.ingredient);
-    this.setState({ drinks, ingredient: '' });
+    if (drinks) {
+      this.setState({ drinks, name: '', drinksFound: true });
+    } else {
+      this.setState({ name: '', drinksFound: false });
+    }
   }
 
   async handleClick() {}
@@ -50,10 +55,15 @@ class ByIngredient extends React.Component {
           </form>
         </div>
         <div className="byNameList">
-          {this.state.drinks.length > 0 &&
+          {this.state.drinksFound === true ? (
             this.state.drinks.map((drink) => {
               return <SingleDrink key={drink.id} id={drink.id} />;
-            })}
+            })
+          ) : (
+            <div className="sorry">
+              <h3>Sorry, we couldn't find what you were looking for.</h3>
+            </div>
+          )}
         </div>
       </div>
     );
