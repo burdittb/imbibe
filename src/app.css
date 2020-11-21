@@ -53,8 +53,8 @@ code {
   overflow: scroll;
   background-color: #fcede6;
   padding-right: 4px;
-  width: 50%;
-  margin-left: 50%;
+  width: 80%;
+  margin-left: 20%;
 }
 
 @keyframes shaker {
