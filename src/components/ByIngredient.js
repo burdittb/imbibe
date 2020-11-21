@@ -39,7 +39,6 @@ class ByIngredient extends React.Component {
             <TextField
               variant="outlined"
               placeholder="search..."
-              color="secondary"
               name="ingredient"
               value={this.state.ingredient}
               onChange={this.handleChange}

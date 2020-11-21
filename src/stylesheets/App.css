@@ -18,6 +18,38 @@ code {
     monospace;
 }
 
+.homeButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeButtons button {
+  margin: 20px;
+  width: 250px;
+}
+
+.navbar {
+  background-color: #fcede6;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  border-radius: 0px 0px 4px 4px;
+  padding-left: 4px;
+  padding-top: 4px;
+}
+
+.screenBelowNav {
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+  overflow: scroll;
+}
+
 @keyframes shaker {
   20% {
     transform: translate(-15px, -40px) rotate(-40deg);
@@ -45,34 +77,8 @@ code {
 
 .shaker {
   height: 75px;
-}
-
-.homeButtons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.homeButtons button {
-  margin: 20px;
-  width: 250px;
-}
-
-.navbar {
-  background-color: #fcede6;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  align-self: center;
-  border-radius: 0px 0px 4px 4px;
-}
-
-.screenBelowNav {
-  padding-top: 90px;
-  overflow: scroll;
+  opacity: 0.5;
+  margin: 100px;
 }
 
 form {

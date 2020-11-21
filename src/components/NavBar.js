@@ -6,7 +6,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <Link href="/">
-        <HomeRoundedIcon style={{ color: '#666363' }} />
+        <HomeRoundedIcon style={{ color: '#A6A1A1' }} fontSize="large" />
       </Link>
     </div>
   );
