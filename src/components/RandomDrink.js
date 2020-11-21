@@ -18,7 +18,7 @@ class RandomDrink extends React.Component {
     return (
       <div className="fullScreen">
         <NavBar />
-        <div className="screenBelowNav">
+        <div className="nonSearchBelowNav">
           {this.state.drink.name ? (
             <SingleDrink key={this.state.drink.id} id={this.state.drink.id} />
           ) : (

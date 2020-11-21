@@ -25,7 +25,7 @@ class SingleDrink extends React.Component {
                 alt={`${this.state.drink.name} provided by Cocktail Database Users`}
               />
             </div>
-            <div className="singleDrinkIngredints">
+            <div className="singleDrinkIngredients">
               <h3>Ingredients:</h3>
               <div className="singleDrinkIngredientRow">
                 {this.state.drink.ingredients.map((ingredient, index) => {

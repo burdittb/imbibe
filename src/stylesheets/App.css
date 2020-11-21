@@ -38,9 +38,13 @@ code {
   align-items: center;
   background-color: #fcede6;
   padding-left: 4px;
+  padding-right: 90%;
 }
 
 .screenBelowNav {
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -91,11 +95,25 @@ form #nameInput {
 
 form #nameButton {
   margin: 0 4px 0 8px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .sorry {
   text-align: center;
   margin: 30px;
+}
+
+.byNameList {
+  padding-top: 40px;
+}
+
+.singleDrinkView {
+  padding-top: 20px;
+}
+
+.nonSearchBelowNav {
+  padding-top: 45px;
 }
 
 .singleDrinkCard {
@@ -105,11 +123,11 @@ form #nameButton {
   width: 90%;
   background-color: white;
   border-radius: 14px;
-  margin: 10px auto 20px;
+  margin: 0px auto 0px auto;
 }
 
 .singleDrinkCard h1 {
-  margin: 15px auto 10px auto;
+  margin: 15px auto 15px auto;
 }
 
 .singleDrinkInfo {
@@ -162,6 +180,6 @@ form #nameButton {
 }
 
 .singleDrinkDirections p {
-  margin: 6px auto 15px auto;
+  margin: 6px auto 25px auto;
   font-style: italic;
 }

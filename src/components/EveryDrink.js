@@ -18,7 +18,7 @@ class EveryDrink extends React.Component {
     return (
       <div className="fullScreen">
         <NavBar />
-        <div className="screenBelowNav">
+        <div className="nonSearchBelowNav">
           {this.state.drinks.length > 0 ? (
             this.state.drinks.map((drink) => {
               return <SingleDrink key={drink.id} id={drink.id} />;
