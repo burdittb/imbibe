@@ -13,9 +13,43 @@ body {
   color: #262525;
 }
 
+body::after {
+  content: '';
+  background: url('ClipartKey_2809392.png');
+  filter: grayscale(75%);
+  opacity: 0.25;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+#root .app main {
+  opacity: 1;
+}
+button {
+  background: #ebbcb7 !important;
+}
+
+.appTitle {
+  opacity: 0.8;
+  font-size: 54px;
+  font-family: 'Pacifico', cursive;
+  display: flex;
+  color: #666363;
+}
+
+.appTitle > img {
+  width: 84px;
+  height: 84px;
+  margin-right: -12px;
+  margin-left: -22px;
 }
 
 .homeButtons {
@@ -23,7 +57,7 @@ code {
   flex-direction: column;
   align-self: center;
   align-items: center;
-  padding-top: 20%;
+  padding-top: 10%;
 }
 
 .homeButtons button {
