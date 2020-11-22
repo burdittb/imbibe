@@ -21,7 +21,9 @@ code {
 .homeButtons {
   display: flex;
   flex-direction: column;
+  align-self: center;
   align-items: center;
+  padding-top: 30%;
 }
 
 .homeButtons button {
