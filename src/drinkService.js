@@ -26,7 +26,6 @@ const drinksReducer = (results) => {
     }
     let counter = 1;
     while (drinkObj['strIngredient' + counter]) {
-      console.log('ingredient?', drinkObj['strIngredient' + counter]);
       let measurement =
         drinkObj['strMeasure' + counter] !== null
           ? drinkObj['strMeasure' + counter]
