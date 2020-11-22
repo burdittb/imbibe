@@ -7,7 +7,7 @@ const NavBar = () => {
   return (
     <div className="navbar">
       <Link to="/" component={RouterLink}>
-        <HomeRoundedIcon style={{ color: '#A6A1A1' }} fontSize="inherit" />
+        <HomeRoundedIcon style={{ color: '#868282' }} fontSize="inherit" />
       </Link>
     </div>
   );
