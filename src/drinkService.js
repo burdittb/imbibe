@@ -9,7 +9,7 @@ const drinksReducer = (results) => {
     return;
   }
 
-  results.drinks.forEach((drinkObj, index) => {
+  results.drinks.forEach((drinkObj) => {
     let streamlinedDrink = {
       id: drinkObj.idDrink,
       name: drinkObj.strDrink,
@@ -24,14 +24,16 @@ const drinksReducer = (results) => {
     if (drinkObj.strAlcoholic !== 'Alcoholic') {
       streamlinedDrink.alcoholic = false;
     }
-    while (drinkObj['strIngredient' + (index + 1)]) {
+    let counter = 1;
+    while (drinkObj['strIngredient' + counter]) {
+      console.log('ingredient?', drinkObj['strIngredient' + counter]);
       let measurement =
-        drinkObj['strMeasure' + (index + 1)] !== null
-          ? drinkObj['strMeasure' + (index + 1)]
+        drinkObj['strMeasure' + counter] !== null
+          ? drinkObj['strMeasure' + counter]
           : '';
-      let ingredient = drinkObj['strIngredient' + (index + 1)];
+      let ingredient = drinkObj['strIngredient' + counter];
       streamlinedDrink.ingredients.push(`${measurement} ${ingredient}`);
-      index++;
+      counter++;
     }
     drinks.push(streamlinedDrink);
   });
